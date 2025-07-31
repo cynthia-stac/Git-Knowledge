@@ -880,3 +880,50 @@ To https://github.com/cynthia-stac/Git-Knowledge.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 
 ```
+
+## Bundle 4
+
+### Exercise 1
+
+```bash
+   user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git remote add git-copy https://github.com/cynthia-stac/Gym-Git-Exercise-Solutions2.git
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git add home.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git commit -m "Added a phrase after codes"
+[main 12674f9] Added a phrase after codes
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 325.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cynthia-stac/Git-Knowledge.git
+   28eb1ce..12674f9  main -> main
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git push git-copy main
+Enumerating objects: 64, done.
+Counting objects: 100% (64/64), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (60/60), done.
+Writing objects: 100% (64/64), 13.50 KiB | 1.93 MiB/s, done.
+Total 64 (delta 30), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (30/30), done.
+To https://github.com/cynthia-stac/Gym-Git-Exercise-Solutions2.git
+ * [new branch]      main -> main
+
+```
