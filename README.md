@@ -927,3 +927,63 @@ To https://github.com/cynthia-stac/Gym-Git-Exercise-Solutions2.git
  * [new branch]      main -> main
 
 ```
+
+## Bundle 4
+
+### Exercise 2
+
+```bash
+   user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git branch ft/squashing
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/squashing
+Switched to branch 'ft/squashing'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating b1e610a..b78b302
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.js  | 1 +
+ footer2.js | 1 +
+ 2 files changed, 2 insertions(+)
+ create mode 100644 footer.js
+ create mode 100644 footer2.js
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/squashing)
+$ git commit -m "Adding squashed changes"
+[ft/squashing 5b5fa56] Adding squashed changes
+ 2 files changed, 2 insertions(+)
+ create mode 100644 footer.js
+ create mode 100644 footer2.js
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/squashing)
+$ git push
+fatal: The current branch ft/squashing has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/squashing
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/squashing)
+$ git push --set-upstream origin ft/squashing
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 285 bytes | 285.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/cynthia-stac/Git-Knowledge/pull/new/ft/squashing
+remote:
+To https://github.com/cynthia-stac/Git-Knowledge.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+
+```
