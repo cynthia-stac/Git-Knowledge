@@ -786,3 +786,97 @@ branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
 Everything up-to-date
 
 ```
+
+### Exercise 2
+
+```bash
+   user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+Your branch is up to date with 'origin/ft/faq-page'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ echo > header.css
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git add header.css
+warning: in the working copy of 'header.css', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git commit -m "Added a css file in main"
+[main 1a2ecd4] Added a css file in main
+ 1 file changed, 1 insertion(+)
+ create mode 100644 header.css
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 280 bytes | 280.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/cynthia-stac/Git-Knowledge.git
+   a6cfe49..1a2ecd4  main -> main
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign|REBASE 1/5)
+$ git rebase main
+fatal: It seems that there is already a rebase-merge directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr ".git/rebase-merge"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign|REBASE 1/5)
+$ git merge main
+Already up to date.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign|REBASE 1/5)
+$ git rebase --continue
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign)
+$ git add home.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign)
+$ git commit -m "New lines added to current page"
+[ft/home-page-redesign c4348c2] New lines added to current page
+ 1 file changed, 2 insertions(+)
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/home-page-redesign)
+$ git push --set-upstream origin ft/home-page-redesign
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (15/15), done.
+Writing objects: 100% (17/17), 1.56 KiB | 798.00 KiB/s, done.
+Total 17 (delta 8), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (8/8), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/cynthia-stac/Git-Knowledge/pull/new/ft/home-page-redesign
+remote:
+To https://github.com/cynthia-stac/Git-Knowledge.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+
+```
