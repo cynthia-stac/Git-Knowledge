@@ -383,3 +383,193 @@ branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 
 ```
 
+### Exercise 2
+
+```bash
+   user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/bundle-2)
+$ git checkout main
+M       README.md
+Switched to branch 'main'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git pull
+Already up to date.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git branch ft/service-redesign
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git add services.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git commit -m "Added new content"
+[ft/service-redesign 5e926f1] Added new content
+ 1 file changed, 3 insertions(+)
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 363 bytes | 363.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/cynthia-stac/Git-Knowledge/pull/new/ft/service-redesign
+remote:
+To https://github.com/cynthia-stac/Git-Knowledge.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git add services.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git commit -m "A heading was added"
+[main 93d4e0d] A heading was added
+ 1 file changed, 1 insertion(+)
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 305 bytes | 305.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cynthia-stac/Git-Knowledge.git
+   5b1cd62..93d4e0d  main -> main
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git diff main ft/service-redesign
+diff --git a/services.html b/services.html
+index 1fb47cd..d7a9d5d 100644
+--- a/services.html
++++ b/services.html
+@@ -1,3 +1,5 @@
+ <p>  We offer very good services! Join us.</p>
+ <p>This the addition paragraph</p>
+-<h3>Rwanda</h3>
+\ No newline at end of file
++<p>We haave to make new changes</p>
++
++
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        services.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git add services.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git commit -m "Dropped a conflicting line"
+[ft/service-redesign 6c946db] Dropped a conflicting line
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cynthia-stac/Git-Knowledge.git
+   5e926f1..6c946db  ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git merge ft/service-redesign
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main|MERGING)
+$ git merge ft/service-redesign
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main|MERGING)
+$ git add services.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main|MERGING)
+$ git commit -m "Solved the conflict"
+[main a8fca6e] Solved the conflict
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 318 bytes | 318.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/cynthia-stac/Git-Knowledge.git
+   93d4e0d..a8fca6e  main -> main
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git merge ft/service-redesign
+Already up to date.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/service-redesign)
+$ git merge main
+Updating 6c946db..a8fca6e
+Fast-forward
+ services.html | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+
+```
