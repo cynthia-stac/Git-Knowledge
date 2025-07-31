@@ -278,5 +278,9 @@ Changes not staged for commit:
 
 Dropped stash@{0} (6bcfa8375468173fb52daedb01eec2e2b7660dcb)
 
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git reset --hard
+HEAD is now at 07a164b Added new lines to readme file
+
 ```
 
