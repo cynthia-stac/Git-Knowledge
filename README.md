@@ -573,3 +573,216 @@ Fast-forward
  1 file changed, 1 insertion(+), 3 deletions(-)
 
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+   user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ echo > team.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git add team.html
+warning: in the working copy of 'team.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git commit -m "Content added in a newly created file"
+[ft/team-page 31c71b6] Content added in a newly created file
+ 1 file changed, 7 insertions(+)
+ create mode 100644 team.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git push --set-upstream origin ft/team-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 343 bytes | 171.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/cynthia-stac/Git-Knowledge/pull/new/ft/team-page
+remote:
+To https://github.com/cynthia-stac/Git-Knowledge.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git branch ft/contact-page
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (main)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git log
+commit 31c71b63ed9147befd0a7a9cd7e33d2840010a0c (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 14:13:53 2025 +1100
+
+    Content added in a newly created file
+
+commit 2a7adadc8754a042aa68571511d44d79024dcac8 (origin/main, origin/HEAD, main, ft/contact-page)
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 13:37:08 2025 +1100
+
+    Submitted Exercise 2 bundle 2
+
+commit a8fca6e630193adc4aae81b1736fd48eaf049b2f (ft/service-redesign)
+Merge: 93d4e0d 6c946db
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 13:26:50 2025 +1100
+
+    Solved the conflict
+
+commit 6c946dbd1441493b4b0bf68e48d9a5d7de955cf6 (origin/ft/service-redesign)
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 13:07:21 2025 +1100
+
+    Dropped a conflicting line
+
+commit 93d4e0d21872724a79af110dee2a924b51d3c9bf
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 12:52:34 2025 +1100
+
+    A heading was added
+
+commit 5e926f140d1084a420ff0cfb5e52c17e581cfbf8
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 12:37:25 2025 +1100
+
+    Added new content
+
+commit 5b1cd62791c42a2f3ac610f188475d16a8b4c62c
+Author: Cynthia Umubyeyi <umubnthia@gmail.com>
+Date:   Thu Jul 31 12:17:41 2025 +1100
+
+    Submitted exercise 1 bundle-2
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git log --oneline
+31c71b6 (HEAD -> ft/team-page, origin/ft/team-page) Content added in a newly created file
+2a7adad (origin/main, origin/HEAD, main, ft/contact-page) Submitted Exercise 2 bundle 2
+a8fca6e (ft/service-redesign) Solved the conflict
+6c946db (origin/ft/service-redesign) Dropped a conflicting line
+93d4e0d A heading was added
+5e926f1 Added new content
+5b1cd62 Submitted exercise 1 bundle-2
+98a727e (origin/ft/bundle-2, ft/bundle-2) New paragraph added
+e8d9cee (dev) Added a new file and made some changes
+9f38f9c Did a reset
+744d998 Delete team.html
+07a164b Added new lines to readme file
+1f256b5 Added a readme file
+b5c6fdd Added new files
+aaf72ac Update README.md
+8a7f10e Updated files
+b5ffda9 Update README.md
+0e6d30e Initial commit
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git cherry-pick 31c71b63ed9147befd0a7a9cd7e33d2840010a0c
+[ft/contact-page 3f3f2cf] Content added in a newly created file
+ Date: Thu Jul 31 14:13:53 2025 +1100
+ 1 file changed, 7 insertions(+)
+ create mode 100644 team.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ echo > contact.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git add contact.html
+warning: in the working copy of 'contact.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git commit -m "New content in a new branch"
+[ft/contact-page 7aab5d1] New content in a new branch
+ 1 file changed, 2 insertions(+)
+ create mode 100644 contact.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git push
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 597 bytes | 597.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/cynthia-stac/Git-Knowledge.git
+   721af1b..7aab5d1  ft/contact-page -> ft/contact-page
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git branch ft/faq-page
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/contact-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ echo > faq.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ git add faq.html
+warning: in the working copy of 'faq.html', LF will be replaced by CRLF the next time Git touches it
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ git commit -m "A band new file again"
+[ft/faq-page 4fb93ac] A band new file again
+ 1 file changed, 1 insertion(+)
+ create mode 100644 faq.html
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/cynthia-stac/Git-Knowledge/pull/new/ft/faq-page
+remote:
+To https://github.com/cynthia-stac/Git-Knowledge.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ git revert 31c71b63ed9147befd0a7a9cd7e33d2840010a0c
+On branch ft/faq-page
+Your branch is up to date with 'origin/ft/faq-page'.
+
+nothing to commit, working tree clean
+
+user@LAPTOP-KQSA7V3I MINGW64 ~/gitExercise (ft/faq-page)
+$ git push --set-upstream origin ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+Everything up-to-date
+
+```
